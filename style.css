@@ -82,19 +82,24 @@ footer {
     background-color: #ff69b4;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 1px;
+    font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     position: absolute;
     right: 20px;
     top: 20px;
+    display: flex;
+    align-items: center; /* Menyelaraskan ikon secara vertikal */
 }
+
+
 
 .logout-btn:hover {
     background-color: #ff4081;
 }
+
 
 /* Animasi latar belakang bergerak */
 @keyframes backgroundMove {
