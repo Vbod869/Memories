@@ -139,7 +139,7 @@ footer {
     }
 
     .photo-box {
-        width: 80%; /* Lebar hampir penuh di ponsel */
+        width: 50%; /* Lebar hampir penuh di ponsel */
         height: 250px;
     }
 
