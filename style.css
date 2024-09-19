@@ -15,34 +15,40 @@ body {
     background: linear-gradient(120deg, #000, #003366, #014bb9, #003366);
     background-size: 200% 200%;
     animation: backgroundMove 15s ease-in-out infinite;
+    padding: 20px;
 }
 
 header {
     margin-bottom: 20px;
     animation: fadeIn 2s ease-in-out;
+    text-align: center; /* Center header text */
 }
 
 h1 {
     font-size: 3rem;
     color: #ff99cc; /* Warna pink yang lebih terang */
+    margin-bottom: 20px;
 }
 
+/* Kontainer Foto */
 .photos-section {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Agar foto bisa turun ke bawah di layar kecil */
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
     animation: fadeInUp 2s ease-in-out;
 }
 
 .photo-box {
-    width: 28%;
-    height: 400px;
+    width: 30%;
+    height: 300px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     position: relative;
+    margin: 10px; /* Margin antar foto */
 }
 
 .photo-box img {
@@ -66,27 +72,7 @@ footer {
     font-size: 1.2rem;
     color: #ffccff; /* Warna pink terang untuk footer */
     animation: fadeIn 3s ease-in-out;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    text-align: center; /* Center footer text */
 }
 
 .logout-btn {
@@ -120,4 +106,61 @@ footer {
     }
 }
 
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness - Untuk layar lebih kecil */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .photos-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-box {
+        width: 80%; /* Lebar hampir penuh di ponsel */
+        height: 250px;
+    }
+
+    .logout-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Responsiveness - Untuk layar ponsel lebih kecil */
+@media (max-width: 470px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .photo-box {
+        height: 200px;
+    }
+
+    .logout-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
