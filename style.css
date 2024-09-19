@@ -130,17 +130,19 @@ footer {
 /* Responsiveness - Untuk layar lebih kecil */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .photos-section {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .photo-box {
-        width: 50%; /* Lebar hampir penuh di ponsel */
+        width: 45%; /* Lebih besar dari 50% agar lebih pas di layar sedang */
         height: 250px;
+        margin: 10px 5px;
     }
 
     .logout-btn {
@@ -150,17 +152,30 @@ footer {
 }
 
 /* Responsiveness - Untuk layar ponsel lebih kecil */
-@media (max-width: 470px) {
+@media (max-width: 480px) {
     h1 {
         font-size: 1.8rem;
     }
 
     .photo-box {
+        width: 90%; /* Lebar hampir penuh di ponsel */
         height: 200px;
     }
 
     .logout-btn {
         padding: 6px 12px;
         font-size: 12px;
+    }
+}
+
+/* Responsiveness - Untuk layar besar */
+@media (min-width: 1024px) {
+    .photo-box {
+        width: 25%;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
     }
 }
